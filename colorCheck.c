@@ -13,7 +13,7 @@
 
 // RingmasterJoystick.c
 
-int SPEED = -42;
+int SPEED = -60;
 
 task loadRings()
 {
@@ -63,7 +63,7 @@ task main()
 		displaySensorValues(line1, colorSensor);
 		tankControl(ChD, ChA, 10);
 		if(getJoystickValue(BtnEUp) == 1) {
-			setMotorSpeed(ringIntake, 40);
+			setMotorSpeed(ringIntake, 60);
 			startTask(loadRings);
 		}
 		if(getJoystickValue(BtnEDown) == 1) {
